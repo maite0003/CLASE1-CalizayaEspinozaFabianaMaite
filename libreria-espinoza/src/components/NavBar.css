@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Love+Light&display=swap');
+
+h2{
+    font-family: 'Love Light', cursive;
+    font-size: 5rem;
+    margin: 1px;
+}
+
+.menuPrincipal{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;    
+}
+.menuPrincipal ul {
+    list-style: none;
+}
+.menuPrincipal li {
+    margin: 32px 0px;
+    text-align: center;
+}
+.menuPrincipal nav ul a {
+    font-family: Arial, Helvetica, sans-serif;
+    color: black;
+    font-size: 1.4375rem;
+    border-radius: 8px;
+    text-decoration: none;
+    padding: 15px 30px;
+    background: #bd0000;
+}
