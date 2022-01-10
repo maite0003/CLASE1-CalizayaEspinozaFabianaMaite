@@ -1,8 +1,7 @@
 import React from 'react'
-import Item from "./Item";
+import Item from "../Item/Item";
 import { useState, useEffect } from 'react'
-import { getFetch } from '../helpers/getFetch'
-import './Item.css'
+import { getFetch } from '../../helpers/getFetch'
 
 function ItemList () {
 

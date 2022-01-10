@@ -4,7 +4,7 @@ function Item  (props) {
     
     return(
         <div className='card' key={props.id}>
-            <div className='inner-card'>
+            <div /*className='inner-card'*/>
                 <div className='inner-card-left'>
                     <div className='card-title'>
                         {props.title}
@@ -14,11 +14,11 @@ function Item  (props) {
                         {props.price}
                     </div>
                 </div>
-                <div className='inner-card-right'>
+            {/*<div className='inner-card-right'>
                     <div className='card-info'>
                         {props.description}
                     </div>
-                </div>
+                </div>*/}
             </div>
         </div>
     )
