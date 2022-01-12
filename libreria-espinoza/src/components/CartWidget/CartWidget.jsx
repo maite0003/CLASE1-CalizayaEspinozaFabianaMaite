@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import { FaShoppingCart } from 'react-icons/fa';
 
 const CartWidget = () => {
@@ -6,7 +7,7 @@ const CartWidget = () => {
         <div className='cartWidget'>
             <ul>
                 <li>
-                    <a href=""><FaShoppingCart /></a>
+                    <Link to='/cart' className='a-link'><FaShoppingCart /></Link>
                 </li>
             </ul>
         </div>

@@ -1,3 +1,7 @@
+a{
+    text-decoration: none;
+    color: black;
+}
 .cards-contenedor{
     display: flex;
     width: auto;
@@ -11,6 +15,7 @@
     border-radius: 12px;
     display: flex;
     padding: 15px;
+    color: black;
 }
 .inner-card{
     background-color: rgba(255, 255, 255, 0.246);

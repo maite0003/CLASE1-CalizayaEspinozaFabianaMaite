@@ -1,9 +1,17 @@
+.counter{
+    display: flex;
+}
 .counter button{
     font-family: Arial, Helvetica, sans-serif;
+    background-color: #bd0000; /* Green */
+    border: none;
     color: black;
-    font-size: 1.4375rem;
-    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
     text-decoration: none;
-    padding: 15px 30px;
-    background: #bd0000;
+    display: inline-block;
+    font-size: 1.4375rem;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 12px;
 }

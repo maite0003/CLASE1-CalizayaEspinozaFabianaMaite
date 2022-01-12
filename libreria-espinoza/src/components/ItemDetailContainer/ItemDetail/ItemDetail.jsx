@@ -3,6 +3,7 @@ import React from 'react'
 //import { getFetch } from '../../helpers/AsyncMock'
 //import { getFetch } from '../../helpers/getFetch'
 import '../../ItemListContainer/Item/Item.css'
+import ItemCount from '../../ItemCount/ItemCount'
 const ItemDetail = ({item}) => {
 
     return(
@@ -27,6 +28,7 @@ const ItemDetail = ({item}) => {
                             <b>Genero: </b>{item.genero}
                             <b>Idioma: </b>{item.idioma}
                         </div>
+                        <ItemCount min={1} max={5} />
                     </div>
                 </div>
             </div>

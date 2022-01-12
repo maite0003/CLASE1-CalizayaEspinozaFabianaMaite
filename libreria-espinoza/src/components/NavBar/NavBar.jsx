@@ -1,5 +1,8 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import CartWidget from '../CartWidget/CartWidget'
+import './NavBar.css'
+import '../ItemListContainer/Item/Item.css'
 
 function NavBar() {
     return (
@@ -7,18 +10,18 @@ function NavBar() {
             <CartWidget />
             <div className="menuPrincipal">
                 <div className='brandBar'>
-                    <div> <h2>Libreria</h2> </div>
+                    <div> <Link to='/'><h2>Libreria</h2></Link> </div>
                 </div>
                 <nav>
                     <ul>
                         <li>
-                            <a href="">Inicio</a>
+                            <Link to='/' className='a-link'>Inicio</Link>
                         </li>
                         <li>
-                            <a href="">Libros</a>
+                            <Link to='/categoria/libros' className='a-link'>Libros</Link>
                         </li>
                         <li>
-                            <a href="">Peliculas</a>
+                            <Link to='/categoria/peliculas' className='a-link'>Peliculas</Link>
                         </li>
                     </ul>
                 </nav>
