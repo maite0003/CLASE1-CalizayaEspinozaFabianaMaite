@@ -12,9 +12,6 @@ const ItemListContainer = (props) => {
 
     const {idCategoria} = useParams()
 
-    console.log(idCategoria)
-
-
     useEffect( ()=> {
         if (idCategoria){
             getFetch

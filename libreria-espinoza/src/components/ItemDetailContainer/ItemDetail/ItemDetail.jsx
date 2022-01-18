@@ -1,10 +1,18 @@
 import React from 'react'
-//import { useState, useEffect } from 'react'
+import { useState } from 'react'
 //import { getFetch } from '../../helpers/AsyncMock'
 //import { getFetch } from '../../helpers/getFetch'
 import '../../ItemListContainer/Item/Item.css'
+import { Link } from 'react-router-dom'
 import ItemCount from '../../ItemCount/ItemCount'
+import '../../NavBar/NavBar.css'
 const ItemDetail = ({item}) => {
+    const [show, setShow] = useState(true)
+    
+    const onAdd = (counter) => {
+        setShow(false)
+        console.log(counter)
+    }
 
     return(
         <div className='cards-contenedor'>
@@ -15,7 +23,7 @@ const ItemDetail = ({item}) => {
                             {item.title}
                         </div>
                         <div className='card-foto'>
-                            <img src={item.foto}/>
+                            <img src={item.foto} alt='item-foto'/>
                             {item.price}
                         </div>
                     </div>
@@ -28,7 +36,11 @@ const ItemDetail = ({item}) => {
                             <b>Genero: </b>{item.genero}
                             <b>Idioma: </b>{item.idioma}
                         </div>
-                        <ItemCount min={1} max={5} />
+                        {show ? <ItemCount onAdd={onAdd} min={1} max={5} /> :
+                            <div className='a-link'>
+                                <Link to='/cart'>Ir al carrito</Link>
+                            </div>
+                        }
                     </div>
                 </div>
             </div>
