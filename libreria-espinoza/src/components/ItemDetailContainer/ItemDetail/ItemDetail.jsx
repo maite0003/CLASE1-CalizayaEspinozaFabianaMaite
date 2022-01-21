@@ -6,12 +6,16 @@ import '../../ItemListContainer/Item/Item.css'
 import { Link } from 'react-router-dom'
 import ItemCount from '../../ItemCount/ItemCount'
 import '../../NavBar/NavBar.css'
+import { useCartContext } from '../../../context/cartContext'
+
 const ItemDetail = ({item}) => {
     const [show, setShow] = useState(true)
-    
+    const { agregarAlCarrito } = useCartContext()
+
     const onAdd = (counter) => {
         setShow(false)
         console.log(counter)
+        agregarAlCarrito({ ...item, cantidad: counter })
     }
 
     return(

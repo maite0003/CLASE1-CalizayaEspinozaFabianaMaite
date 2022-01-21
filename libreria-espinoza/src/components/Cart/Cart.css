@@ -1,0 +1,30 @@
+.item-cart{
+    padding: 44px 0px 48px 0px;
+    border-bottom: 1px solid #e6e6e6;
+    display: flex;
+    margin: 0px 100px 0px 100px;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: flex-start;
+}
+.item-cart-img img{
+    width: 100px;
+    height: 156px;
+}
+.item-cart-info{
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    display: contents;
+}
+.item-cart-info .item-cart-descripcion{
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 600;
+}
+.item-cart-info .item-cart-quantity{
+    border: 1px solid #e6e6e6;
+    padding: 10px;
+}
+.item-cart-info .item-cart-price{
+    font-size: 26px;
+    font-weight: 400;
+}
