@@ -28,7 +28,7 @@ const ItemDetail = ({item}) => {
                         </div>
                         <div className='card-foto'>
                             <img src={item.foto} alt='item-foto'/>
-                            {item.price}
+                            ${item.price}
                         </div>
                     </div>
                     <div className='inner-card-right'>

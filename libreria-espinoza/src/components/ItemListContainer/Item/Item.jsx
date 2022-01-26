@@ -14,7 +14,7 @@ function Item  ({prod}) {
                         </div>
                         <div className='card-foto'>
                             <img src={prod.foto} alt='img-producto'/>
-                            {prod.price}
+                            ${prod.price}
                         </div>
                     </div>
                 {/*<div className='inner-card-right'>

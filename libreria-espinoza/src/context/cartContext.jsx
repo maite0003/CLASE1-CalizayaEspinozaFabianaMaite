@@ -22,8 +22,9 @@ export const CartContextProvider = ({children}) =>{
             cartList[indice].cantidad = newQuantity
 
             let a = [...cartList]
-
+                        
             setCartList(a)
+            console.log(cartList)
             }else{
                 setCartList([...cartList, items])
             }
@@ -33,13 +34,43 @@ export const CartContextProvider = ({children}) =>{
         setCartList([])
     }
 
+    const precioTotal = () => {
+        let count = 0
+        cartList.forEach((productos) => {
+            count+= productos.price * productos.cantidad;
+        })
+        console.log(count)
+        return count;
+        
+    }
+    
+    const borrarItem = (id) => {
+        const itemSelect = cartList.filter((producto) => producto.id !==id);
+        setCartList(itemSelect)
+        console.log(itemSelect)
+    }
+
+    const cantidadItemsAgregados = () => {
+        let cantidad = 0
+        cartList.forEach((productos) => {
+            cantidad+= productos.cantidad;
+        })
+        console.log(cantidad)
+        return cantidad;
+        
+    }
+
     return(
         <cartContext.Provider value={{
             cartList,
             agregarAlCarrito,
-            vaciarCarrito
+            vaciarCarrito,
+            precioTotal,
+            borrarItem,
+            cantidadItemsAgregados
         }}>
             {children}
         </cartContext.Provider>
     )
+
 }
