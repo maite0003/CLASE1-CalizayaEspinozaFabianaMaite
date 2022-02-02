@@ -3,13 +3,13 @@ import './Cart.css'
 import { useCartContext } from '../../context/cartContext'
 import { Link } from 'react-router-dom'
 import './../NavBar/NavBar.css'
+import CartForm from './CartForm'
 
 const Cart = () => {
     const { cartList, vaciarCarrito, precioTotal,borrarItem } = useCartContext()
-
+    
     return (
         <>
-        <div className='cart-contenedor'>
             <div className='up'>
                 <div className='precioTotal'>
                     TOTAL: <b>${precioTotal()}</b>
@@ -47,9 +47,9 @@ const Cart = () => {
                         </div>
                     </div>)
                     }
+                    <CartForm />
                 </div>
             )}
-        </div>
         </>
     )
 }

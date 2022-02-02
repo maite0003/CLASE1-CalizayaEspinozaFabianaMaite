@@ -3,7 +3,7 @@ import ItemList from './ItemList/ItemList';
 import { useParams } from 'react-router-dom';
 import { useState, useEffect } from 'react'
 import { getFetch } from '../helpers/getFetch'
-import { collection, getDocs, getFirestore, query, where } from 'firebase/firestore'
+import { collection, getDocs, getFirestore, query, where  } from 'firebase/firestore'
 
 const ItemListContainer = (props) => {
     const [productos, setProductos] = useState([]);

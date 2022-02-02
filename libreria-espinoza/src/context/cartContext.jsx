@@ -60,6 +60,10 @@ export const CartContextProvider = ({children}) =>{
         
     }
 
+    const [finalizarCompra, setFinalizarCompra ] = useState(false)
+
+    const [idOrden, setOrdenId] = useState('')
+
     return(
         <cartContext.Provider value={{
             cartList,
@@ -67,7 +71,11 @@ export const CartContextProvider = ({children}) =>{
             vaciarCarrito,
             precioTotal,
             borrarItem,
-            cantidadItemsAgregados
+            cantidadItemsAgregados,
+            finalizarCompra,
+            setFinalizarCompra,
+            idOrden,
+            setOrdenId
         }}>
             {children}
         </cartContext.Provider>
